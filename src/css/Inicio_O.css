@@ -1,0 +1,173 @@
+/* --- 1. BARRA SUPERIOR (LOGOUT Y TOGGLE) --- */
+.top-bar {
+    height: 50px; 
+    background-color: #582e05;
+    color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .welcome-text {
+    margin-right: 15px;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+.boton{
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sidebar-toggle-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+.layout-container {
+    position: relative;
+    z-index: 999;
+}
+
+/* --- 2. SIDEBAR (MENÚ LATERAL IZQUIERDO) --- */
+
+.sidebar-container {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #75451f;
+    padding-top: 60px; 
+    overflow-y: auto;
+    z-index: 998;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-container.collapsed {
+    transform: translateX(-100%);
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar-item,
+.sidebar-dropdown {
+    width: 100%;
+    position: relative; 
+}
+
+/* Enlaces simples (como Inicio, Ganado) */
+.sidebar-item > a,
+.sidebar-item > a:visited, /* Arreglo para React Router Link */
+.sidebar-item > a:hover {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar-item:hover > a {
+    background-color: #906139;
+}
+
+
+/* --- 3. SUBMENÚ (MODIFICADO PARA ACORDEÓN) --- */
+
+/* El <div> clickeable que abre el acordeón */
+.sidebar-dropdown-toggle {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: #5b3124;
+    user-select: none; /* Evita que se seleccione el texto al hacer doble clic */
+}
+
+/* Hover para el <div> */
+.sidebar-dropdown:hover > .sidebar-dropdown-toggle {
+    background-color: #906139;
+}
+
+/* El submenú (acordeón) */
+.sidebar-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #d6b77f; 
+    
+    /* ¡LA MAGIA DE LA ANIMACIÓN! */
+    max-height: 0; /* Oculto por defecto */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.sidebar-dropdown.open > .sidebar-submenu {
+    max-height: 500px; /* Un valor alto para que quepa todo */
+    transition: max-height 0.5s ease-in;
+}
+
+/* Enlaces del submenú */
+.sidebar-submenu li a,
+.sidebar-submenu li > a:visited { /* Arreglo para React Router Link */
+    color: #492828;
+    padding: 12px 16px;
+    /* ¡Importante! Añadimos indentación para que se vea anidado */
+    padding-left: 30px; 
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-submenu li:hover {
+    background-color: #bc9a6f;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding-top: 50px; 
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    /* Añadimos esto para que el contenido ocupe el espacio */
+    min-height: calc(100vh - 50px); /* Altura total menos la top-bar */
+}
+
+.main-content.collapsed {
+    margin-left: 0;
+}
+
+.inicio-title-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding-top: 30px;
+}

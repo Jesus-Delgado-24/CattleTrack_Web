@@ -1,0 +1,275 @@
+.enfermedades-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #FFF2D8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/Fondo_Get.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.enfermedades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 8px 16px #244a57;
+}
+
+.enfermedades-table th,
+.enfermedades-table td {
+  border: 1px solid #4A4947;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.enfermedades-table th {
+  background-color: #113946;
+  font-weight: bold;
+  color: white;
+}
+
+.enfermedades-table tr {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.enfermedades-table tr:nth-child(even) {
+  background-color: #EAD7BB;
+}
+
+.enfermedades-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.enfermedades-table tr:hover {
+  transform: scale(1.02);
+  background-color: #BCA37F;
+}
+
+.search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #4A4947;
+  border-radius: 4px;
+  width: 250px;
+  background-color: #ffffff;
+  color: #4A4947;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  margin-left: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #113946;
+  box-shadow: 0 0 5px #A47E3B;
+}
+
+.search-input::placeholder {
+  color: #BCA37F;
+  font-style: italic;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #113946;
+  text-align: center;
+  animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #131010;
+  }
+  33% {
+    color: #543A14;
+  }
+  66% {
+    color: #6C4E31;
+  }
+  100% {
+    color: #131010;
+  }
+}
+
+.table-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #113946;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #0d2c36;
+  transform: scale(1.16);
+  box-shadow: 0 8px 16px #1e6177;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-close {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.modal-overlay.opening {
+  animation: modal-open 0.3s ease-out;
+}
+
+.modal-overlay.closing {
+  animation: modal-close 0.3s ease-in;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: modal-open 0.3s ease-out;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c92020;
+  transform: scale(1.1);
+  color: white;
+  box-shadow: 0 8px 16px #c24444;
+}
+
+.save-button {
+  background-color: #113946;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.save-button:hover {
+  background-color: #0d2c36;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px #244a57;
+}
+
+.update-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #1a576b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.update-button:hover {
+  background-color: #0d2c36;
+  transform: scale(1.05);
+}.modal-overlay.opening {
+  animation: modal-open 0.3s ease-out;
+}
+
+.modal-overlay.closing {
+  animation: modal-close 0.3s ease-in;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-close {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}

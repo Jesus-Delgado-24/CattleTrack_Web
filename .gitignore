@@ -1,0 +1,22 @@
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+
+# Archivos de .NET / Visual Studio
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Variables de entorno (Seguridad)
+.env
+.env.local
+
+# Archivos de sistema operativo
+Thumbs.db
+.DS_Store
+
+# Logs de bases de datos
+*.log

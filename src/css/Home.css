@@ -1,0 +1,84 @@
+/* src/css/Home.css */
+
+body {
+  /* 1. Color de fondo si la imagen no carga */
+  background-color: #F5DEB3;
+
+  /* 3. Ajustes para que la imagen cubra todo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Opcional: deja el fondo fijo */
+
+  /* --- Tus estilos anteriores --- */
+  color: #eee;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Regla 'box-sizing' */
+* {
+  box-sizing: border-box;
+}
+
+/* Clase para el <Container> principal */
+.home-container {
+  padding-top: 0.5rem;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image2 {
+  max-width: 200px;
+  max-height: 160px;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Espacio entre imagen y título */
+  object-fit: contain;
+}
+
+/* Clase para la <Card> de bienvenida (ahora un <div>) */
+.welcome-card {
+  background: #6e4238;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #333;
+  margin-bottom: 0rem;
+}
+
+.welcome-card h1 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.welcome-card .lead {
+  color: #ccc;
+  font-size: 1.25rem;
+}
+
+/* Clase para la <Row> de características */
+.features-row {
+  color: #ddd;
+}
+
+.features-row h2 {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 0.5rem;
+}
+
+.features-row ul {
+  list-style-type: "✓ ";
+  padding-left: 1.5rem;
+}
+
+.features-row li {
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.navbar-cafe {
+  /* Usamos el mismo café de la tarjeta de bienvenida */
+  background-color: #4a2d24;
+}

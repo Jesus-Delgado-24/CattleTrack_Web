@@ -1,0 +1,98 @@
+.enfermedades-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #FFF2D8; /* Cambia este color al que prefieras */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/Fondo_Get.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+}
+
+.enfermedades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 8px 16px #244a57;
+}
+
+.enfermedades-table th,
+.enfermedades-table td {
+  border: 1px solid #4A4947;
+  padding: 0.75rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+.enfermedades-table th {
+  background-color: #113946;
+  font-weight: bold;
+  color: white;
+}
+
+.enfermedades-table tr {
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Transición suave */
+}
+
+.enfermedades-table tr:nth-child(even) {
+  background-color: #EAD7BB;
+}
+
+.enfermedades-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.enfermedades-table tr:hover {
+  transform: scale(1.02);
+  background-color: #BCA37F;
+}
+
+.search-input {
+  padding: 0.5rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  border: 1px solid #4A4947; /* Color del borde */
+  border-radius: 4px; /* Bordes redondeados */
+  width: 250px; /* Ancho del cuadro de búsqueda */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #4A4947; /* Color del texto */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Transición suave */
+  margin-left: 1rem; /* Espaciado entre el título y el input */
+}
+
+.search-input:focus {
+  outline: none; /* Elimina el borde azul predeterminado */
+  border-color: #113946; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px #A47E3B; /* Sombra alrededor del cuadro */
+}
+
+.search-input::placeholder {
+  color: #BCA37F; /* Color del texto del placeholder */
+  font-style: italic; /* Estilo cursivo para el placeholder */
+}
+
+.header h2 {
+  font-size: 2.5rem; /* Tamaño del texto */
+  font-weight: bold;
+  color: #113946; /* Color inicial */
+  text-align: center;
+  animation: color-change 3s infinite; /* Aplica la animación */
+}
+
+/* Animación para cambiar de color */
+@keyframes color-change {
+  0% {
+    color: #131010; /* Color inicial */
+  }
+  33% {
+    color: #543A14; /* Segundo color */
+  }
+  66% {
+    color: #6C4E31; /* Tercer color */
+  }
+  100% {
+    color: #131010; /* Vuelve al color inicial */
+  }
+}

@@ -1,0 +1,86 @@
+/* src/css/InfoSlider.css */
+
+.info-slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden; 
+  margin: 1rem 0; /* <-- Margen superior reducido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.slider-item {
+  position: absolute;
+  width: 400px;
+  height: 320px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  display: flex;
+  /* --- CAMBIOS AQUÍ --- */
+  flex-direction: column; /* Apila el contenido (imagen, título, texto) */
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Añade espacio interno */
+  font-size: 1em;  /* Reduce el tamaño de fuente base (de 2em) */
+  color: rgb(0, 0, 0);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+  cursor: pointer;
+  text-align: center; /* Centra el texto */
+}
+
+.slider-item.active {
+  opacity: 1;
+  z-index: 10;
+  cursor: default;
+}
+
+/* --- 4. AÑADE ESTILOS PARA LA IMAGEN --- */
+.slider-item .slider-image {
+  max-width: 200px;
+  max-height: 160px;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Espacio entre imagen y título */
+  object-fit: contain;
+}
+
+/* 5. AJUSTA LOS ESTILOS DE TEXTO (YA LOS TENÍAS) */
+.slider-item h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px 0; /* Margen inferior */
+  text-align: center;
+}
+.slider-item p {
+  font-size: 0.9em;
+  text-align: justify;
+  padding: 0 15px;
+  line-height: 1.4;
+}
+
+.slider-item .slider-list {
+  list-style-type: '✓ ';
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 0.8em;
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.slider-item .slider-list li {
+  padding-bottom: 0.3rem;
+  font-size: 1em;
+}

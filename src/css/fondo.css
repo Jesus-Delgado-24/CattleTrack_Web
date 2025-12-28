@@ -1,0 +1,14 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el html y body ocupen el 100% */
+}
+
+body {
+    background-image: url('../images/fondo_empresa.png');
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
