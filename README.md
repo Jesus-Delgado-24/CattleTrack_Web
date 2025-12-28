@@ -14,9 +14,9 @@ CattleTrack_Web is a software solution designed to optimize livestock management
 ---
 
 ### 🛠️ Tech Stack
-* **Frontend:** React / HTML5 / CSS3 (Adjust based on your project)
-* **Backend:** Node.js (Adjust based on your project)
-* **Database:** MySQL / MongoDB (Adjust based on your project)
+* **Frontend:** React / HTML5 / CSS3
+* **Backend:** Node.js
+* **Database:** MySQL / MongoDB
 * **Tools:** Git, Postman, Visual Studio Code.
 
 ---
